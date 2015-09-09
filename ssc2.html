@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="marks.css">
+<script type ="text/javascript">
+function details(interest,stream,maxsub){
+var jobs
+if (stream=="Arts"){
+if(maxsub=="hindi" || maxsub=="english"){
+alert("As you are good in Language\n you should go for Arts")
+jobs="   -->Possible career:<--\n\
+* Journalism\n\
+* Public relations\n\
+* corporate Blogger \n\
+* social media manager \n\
+* Publishing\n\
+* corporate communication manage\n\
+* marketing \n\
+* teaching\n\
+* writer/editor\n\
+* Bank \n\
+* interpreter/Translator\n\
+* Media and mass communication"
+}
+if (maxsub=="sst")
+{alert("As you are good in Social sceince\n you should go for Arts")
+jobs=" -->Possible Career <--\n\
+* Antropology\n\
+	-historian\n\
+	-museum curator\n\
+	-professor\n\
+* Archeology\n\
+	-biologist\n\
+	-lawyer\n\
+	-urban planner\n\
+* Art historian\n\
+* Geography\n\
+	-economist\n\
+	-Political scieintist\n\
+	-sociologist\n\
+* Journalist/reporter\n\
+* foriegn service officer\n\
+* language translator\n\
+* fashion designer\n\
+* media specilist\n\
+* philosopper\n\
+* Milliatory officier\n\
+* Indian addministrator(IAS/IPS)"
+
+}}
+
+
+if (stream=="Science")
+{
+if (maxsub=="science")
+alert("As you are good in science\n you should go for science")
+if (maxsub=="math")
+alert("As you are good in maths\n you should go for science")
+jobs=" -->Possible career<--\n\
+* Engineer\n\
+* Engineering technician\n\
+* Doctor\n\
+* ISRO\n\
+* DRDO\n\
+* Earth and enviroment sceintist\n\
+* Physist\n\
+* chemist\n\
+* College Professor\n\
+* Naturalist\n\
+* Biologist\n\
+* computional sceintist\n\
+* healthcare sceintest\n\
+ Astronaut\n\
+* Technician (Nany,airforce,army)"
+}
+
+if (stream=="commerce"){
+jobs="  -->Possible career<--\n\
+* Accountant\n\
+* Charted Accountant\n\
+* Company Secretory\n\
+* cost Accountant\n\
+* finance Analysist\n\
+* finance Planner \n\
+* finance Manager\n\
+* finance consultant\n\
+* Investment analysist\n\
+* stoke Broker\n\
+* tax auditot\n\
+* tax consultant\n\
+* Auditor\n\
+* Statistician\n\
+* Economist"
+}
+
+return jobs}
+
+
+function alz(marks,arr)		{
+var board=document.getElementById("board").options[document.getElementById("board").selectedIndex].text
+var interest=document.getElementById("interest").options[document.getElementById("interest").selectedIndex].text
+var stream=document.getElementById("stream").options[document.getElementById("stream").selectedIndex].text
+var min=marks[0]
+var minsub=arr[0]
+var maxsub=arr[0]
+var max=marks[0]
+var total=0
+for (i=0;i<5;i++)
+		{ if(min>marks[i])
+			{min=marks[i];
+				minsub=arr[i]}
+		  if(max<marks[i])
+			{
+			max=marks[i]
+			maxsub=arr[i];}
+			total=total+marks[i]
+		}
+
+var percentage=((parseInt(total)/500)*100).toFixed(2)
+if (board=='CBSE' || board=="ICSE")
+{if (percentage<40)
+	alert("your percentage is "+percentage+"%\nyou should apply for improvement exam!")
+if (Number(min)<38)
+	alert("you should apply for improvement exam in "+minsub);
+}
+else
+{
+if (percentage<38)
+alert("you percentage is "+percentage+"%\nyou should apply for improvement exam")
+if (Number(min)<33)
+	alert("you should apply for improvement exam in "+minsub)
+}
+if (percentage>39){
+alert(details(interest,stream,maxsub))
+}
+}
+
+function valid_onclick() {
+var flag=0
+var marks=new Array(10)
+var arr=new Array('english','hindi','math','science','sst')
+for( i in arr){
+if ((document.getElementById(arr[i]).value)=="")
+{p=arr[i]+"_lab"
+flag-=1
+document.getElementById(p).style="color:red"
+}else if(isNaN(Number(document.getElementById(arr[i]).value))||(Number(document.getElementById(arr[i]).value))<0)
+{p=arr[i]+"_lab"
+flag-=1
+document.getElementById(p).style="color:red"
+}
+else{
+p=arr[i]+"_lab"
+marks[flag]=Number(document.getElementById(arr[i]).value)
+flag+=1
+
+document.getElementById(p).style="color:black"
+
+}
+}
+
+if(flag==5){
+alz(marks,arr)
+}else
+alert("Fill the Correct Entries !")
+}
+</script>
+</head>
+<body background="../marks/images/bgm.jpg">
+</body>
+<body><h2>
+<pre>
+<//form name="sensec" id="pk"><br>
+<a> &nbsp;&nbsp;To analyze your problem we need some information ,Enter your secondary school marks:</a>
+<br><br><br>
+<h3>			Board		  <select name="mySelect" style="width:240px" id='board'>                                                        
+													 <option >CBSE</option>
+													 <option>ICSE</option>
+													 <option>State Board</option>
+													 </select><br>
+			<font id="english_lab" style="color:black" >English</font>		  <input type="text" value="" id="english"  />
+
+			<font id="hindi_lab" style="color:black" >Hindi</font>		  <input type="text" value="" id="hindi"  />
+
+			<font id="math_lab" style="color:black" >Maths</font>		  <input type="text" value="" id="math"  />
+
+			<font id="science_lab" style="color:black" >Science</font>		  <input type="text" value="" id="science"  />
+
+			<font id="sst_lab" style="color:black" >Social Science</font>	  <input type="text" value="" id="sst"  /><br/>
+			Interest	  <select name="mySelect1" id="interest" style="width:240px">
+													 <option value="Sports" >Sports</option>
+													 <option value="Computer" >Computer</option>
+													 <option value="Music" >Music</option>
+</select>                           <br>
+			Stream you prefer <select name="mySelect2" dir="ctl" id="stream" style="width:240px">
+													 <option value="Science">Science</option>
+													 <option style="width:30%" value="Commerce">commerce</option>
+													 <option value="Arts">Arts</option>
+</select>
+                      <br>
+			submit choice here    <input type="Submit"  onclick="valid_onclick()">
+   
+</h2>
+</pre>
+<//form>
+</body>
+</html>
