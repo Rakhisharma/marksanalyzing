@@ -2,7 +2,7 @@
 Marks Analyizing System
 ------------------------
 
-A system Analyze the marks and interest of student is the the 2nd year undergraduate college project 
+A system which Analyze the marks and interest of student is the the 2nd year undergraduate college project 
 which is developed in Javascript and Bootstarp. 
 
 Technology Used:
@@ -14,7 +14,7 @@ Sublime Text
 
 
 About Project:
-I with the help of my professor and my partener (https://github.com/ravsa) developed this web application Marks Analyzing system. This is an Undergraduate College project, which analyze the marks of student and help them to find their area of interest.
+I with the help of my professor and my partner (https://github.com/ravsa) developed this web application Marks Analyzing system. This is an Undergraduate College project, which analyze the marks of student and help them to find their area of interest.
 
 For further queries do not hesitate to contact me.
 
