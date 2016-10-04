@@ -2,8 +2,9 @@
 Marks Analyizing System
 ------------------------
 
-A system which Analyze the marks and interest of student is the the 2nd year undergraduate college project 
-which is developed in Javascript and Bootstarp. 
+ This is a system designed to analyze the marks and interest of student for there further studies. When students plan for there undergrad studies at this point of time most of the students are confused about there field of interest and start looking for career councelling
+Today when there is immense stress to perform from parents,friends and society a student is confused and in dilemma the students marks analyzing system is a step forward.
+“It is better to go forward knowing your competencies, then to go no where” 
 
 Technology Used:
 Javascript
@@ -21,8 +22,7 @@ For further queries do not hesitate to contact me.
 Rakhi Sharma
 Arya College Of Engineering & IT, Jaipur  India.
 
-contact details:
-rakhish1994@gmail.com
+Twitter: atbrakhi
 
 IRC:
 Rakhisharma
